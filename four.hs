@@ -1,3 +1,4 @@
+------------------------------------------------------------------------------
 -- | Project Euler No. 4
 --
 -- Find the largest palindrome made from the product of 2 three-digit numbers.

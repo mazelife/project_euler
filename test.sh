@@ -7,3 +7,5 @@ echo "Haskell solution:"
 ./$1
 echo "Python solution:"
 python "$1.py"
+
+# FIXME: The ability to time these would be nice...

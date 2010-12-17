@@ -24,5 +24,3 @@ while True:
         break
     else:
         i += 2
-
-# Answer: 232792560
