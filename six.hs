@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------
--- | Project Euler No. 5
+-- | Project Euler No. 6
 -- 
 -- The sum of the squares of the first ten natural numbers is,
 -- 1^(2) + 2^(2) + ... + 10^(2) = 385
@@ -12,3 +12,16 @@
 -- Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 -- 
 
+-- Falhaber's Formula for the sum of squares:
+sum_of_squares :: Int ->  Int
+sum_of_squares n =  ((n * (n + 1)) * ((2 * n) + 1)) `div` 6
+    
+
+square_of_sum :: Int -> Int
+square_of_sum n = (sum [1..n]) ^ 2
+
+result = square_of_sum(100) - sum_of_squares(100)
+
+main :: IO ()
+main = do 
+    putStrLn (show (result))

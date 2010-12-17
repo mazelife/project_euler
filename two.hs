@@ -12,8 +12,8 @@
 fibs :: [Integer]
 fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 
-result = show (sum (takeWhile (<= 4000000) [x | x <- fibs, x `mod` 2 == 0]))
+result = sum (takeWhile (<= 4000000) [x | x <- fibs, x `mod` 2 == 0])
 
 main :: IO ()
 main = do 
-    putStrLn result
+    putStrLn (show result)
