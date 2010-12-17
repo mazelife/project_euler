@@ -1,0 +1,9 @@
+# ignore all dotfiles...
+.*
+# except for .gitignore
+!.gitignore
+# ignore python bytecode
+*.pyc
+# Ignore haskell compilation files
+*.hi
+*.o
