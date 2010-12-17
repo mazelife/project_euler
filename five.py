@@ -6,6 +6,10 @@ Project Euler No. 5
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 """
+
+# NOTE: This implementation is terribly slow...needs to improve.
+
+
 i = 2520
 r = range(2, 21)
 r.reverse()
