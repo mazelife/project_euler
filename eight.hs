@@ -33,10 +33,7 @@ reduce_number_string "" = 0
 reduce_number_string s = max (max_from_number_string s) (reduce_number_string (tail s))
 
 max_from_number_string :: String -> Int
-max_from_number_string s = maximum (map product nums)
-    where
-        sequences = chunk 5 s
-        nums = [map digitToInt s | s <- sequences]
+max_from_number_string s = maximum (map product [map digitToInt s | s <- (chunk 5 s)])
 
 -- Author: mm_freak irc.freenode.net #haskell
 chunk :: Int -> [a] -> [[a]]
@@ -44,5 +41,4 @@ chunk n = takeWhile (not.null) . map (take n) . iterate (drop n)
 
 main :: IO ()
 main = do 
-    let r = reduce_number_string number_string
-    putStrLn (show r)
+    putStrLn (show (reduce_number_string number_string))
